@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Password Generator</title>
+</head>
+
+<body>
+    <main>
+        <div class="centered">
+            <div class="centered" id="userinput">
+                <form action="">
+                    <label for="length">Password Length</label>
+                    <input type="number" id="length" name="length" min=6 max=20 step=1 style="width: 3em"
+                        title="Length of Password" alt="Length of Password" value=15>
+                    <input type="checkbox" id="special" name="special" value="yes">
+                    <label for="nospecial">Special Characters &nbsp;</label>
+                    <button type="button" onclick="ChooseMethod()">Generate Password</button><br>
+                </form>
+            </div>
+            <div class="centered" id="result">
+                <label for="password">Generated Password</label>
+                <input type="password" id="password" name="password" readonly="readonly" title="Generated Password"
+                    alt="Generated Password" style="text-align: centered;">
+                <input type="checkbox" id="viewpw" name="viewpw" value="yes" onclick="ViewPassword()">Show Password
+                <script src="js/passwordgenerator.js"></script>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>
