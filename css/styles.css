@@ -209,11 +209,19 @@ body > svg {
 
 .proj-row {
 	display: flex; 
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 .proj-col{
 	display: block;
+	text-align: left;
+	
+}
+
+.proj-col-width {
+	display: block;
+	text-align: left;
+	width: 500px;
 }
 
 .proj-color-blue {
