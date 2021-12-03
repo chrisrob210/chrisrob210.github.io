@@ -14,9 +14,7 @@ function GetDates(){
 	}
 	christmasday = new Date(christmasday + " 00:00:00");
 	let startDate = new Date(today).getTime();
-    console.log(`StartDate: ${startDate}`);
     let endDate = new Date(christmasday).getTime();
-    console.log(`EndDate: ${endDate}`);
     
 	
     let dates = {  
@@ -31,7 +29,6 @@ function GetDates(){
 function countdown(){
 	dates = GetDates();
     let difference = dates.end - dates.start;
-    console.log(`StartDate: ${dates.start} \nEndDate: ${dates.end}\nDifference: ${difference}`);
     let days = Math.floor((difference / (1000 * 60 * 60 * 24)));
     let hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
