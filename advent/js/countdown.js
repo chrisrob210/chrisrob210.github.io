@@ -31,7 +31,7 @@ function AJAXsendDate(){
 		document.getElementById("countdown").innerHTML =
 		this.responseText;
 	}
-	request.open("GET", "https://chrisrobinson.great-site.net/projects/advent/countdown.php?d=" + GetDates());
+	request.open("POST", "https://chrisrobinson.great-site.net/projects/advent/countdown.php?d=" + GetDates());
 	request.send();
 	
 }	
