@@ -152,7 +152,7 @@ body > svg {
 	border: 0.15em solid rgb(3, 154, 248);
 	border-radius: 1em;
 	background-color: none;
-	color:rgb(3, 154, 248);
+	color:rgb(3, 119, 192);
 	transition: background-color .5s, color .5s, transform .5s;
 }
 
@@ -373,7 +373,7 @@ ul {
 	background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)),
 		url("../images/pexels-johannes-plenio-large.jpg");
 	background-position: center;
-	background-size: 225%;
+	background-size: 250%;
 }
 #slide-2 .slide__bg {
 	/* background-image: url("../images/pexels-hasan-albari-large.jpg");
@@ -387,30 +387,20 @@ ul {
 	background-size: 100%;
 }
 #slide-4 .slide__bg {
-	background-image: repeating-linear-gradient(
+	/*background-image: repeating-linear-gradient(
 		-45deg,
 		rgb(133, 193, 230),
 		rgb(133, 193, 230) 30px,
 		rgb(113, 173, 210) 30px,
 		rgb(113, 173, 210) 60px
-	);
+	);*/
+	background-color: #B3C1C4;
 }
 #slide-5 .slide__bg {
-	background-image: repeating-linear-gradient(
-		rgb(214, 229, 100),
-		rgb(214, 229, 100) 30px,
-		rgb(194, 209, 80) 30px,
-		rgb(194, 209, 80) 60px
-	);
+	background-color: rgb(221, 219, 219);
 }
 #slide-6 .slide__bg {
-	background-image: repeating-linear-gradient(
-		45deg,
-		rgb(133, 213, 230) 0px,
-		rgb(133, 213, 230) 30px,
-		rgb(113, 193, 210) 30px,
-		rgb(113, 193, 210) 60px
-	);
+	background-color: #B3C1C4;
 }
 
 /* misc
@@ -495,30 +485,67 @@ ul {
 			transform-origin: 100% 50%;
 		}
 		.slide:nth-child(2n) .slide__text {
-			transform-origin: 50% 50%;
+			transform-origin: 50% 55%;
 		}
 		.slide:nth-child(2n) .slide__bg {
 			/*transform: translateZ(59px) scale(.85);*/
-			transform: translateZ(-1px) scaleX(1.1) scaleY(.7);
-			top: -10%;
-		}
-		.slide:nth-child(2n + 1):not(:first-child) .slide__bg {
-			transform: translateZ(-1px) scale(1.5);
+			transform: translateZ(-1px) scaleX(1.1) scaleY(.9);
 			top: -15%;
 		}
+
+		.slide:nth-child(2n + 1):not(:last-child), .slide:nth-child(2n + 1):not(:first-child){
+			height: fit-content;
+		}
+
+		.slide:nth-child(2n + 1):not(:first-child) .slide__bg {
+			
+			transform: translateZ(-1px) scale(1.5);
+			top: -5%;
+		}
 		.slide:nth-child(2n + 1):not(:last-child) .slide__bg {
+			
+			top: 5%;
 			bottom: -50%;
+			padding-bottom: 0;
+		}
+		.slide:nth-child(2n + 1):not(:first-child){
+			padding-top: 0%;
+			height: fit-content;
 		}
 		.slide:first-child {
+			top: -5%;
 			padding-top: 5%;
+			padding-bottom: 10%;
+		}
+
+		#slide-5 {
+			padding-bottom: 0;
+		}
+
+		#slide-6 {
+			padding: 0;
+			margin-top: 5rem;
+			padding-top: 5rem;
 		}
 		.slide:last-child {
+			height: fit-content;
 			padding-top: 0%;
-			padding-bottom: 14%;
+			padding-bottom: 0;
+			
+		}
+		.slide:last-child .slide__bg{
+			transform: translateZ(-1px) scale(2);
+			transform-origin: top;
+			
+		}
+		.slide:last-child .slide__text{
+			height: fit-content;
+			padding: 0;
+			transform-origin: 0%;
 		}
 		.slide:nth-child(2n) {
 			z-index: 1; /* ensure slides overlay correctly */
-			padding-bottom: 14%;
+			
 		}
 	}
 }
