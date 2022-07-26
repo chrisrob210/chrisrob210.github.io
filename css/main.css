@@ -1,0 +1,197 @@
+body {
+    position: relative;
+}
+.btn-custom{
+    position: relative;
+    border:0;
+    padding: 0.5rem 1.5rem;
+    background: linear-gradient(to bottom, #3a87fc, #034ebe);
+    color:white;
+    z-index: 1;
+    /* transition: all 0.4s; */
+}
+
+.btn-custom:hover, .btn-custom:active, .btn-custom:focus {
+    border:0;
+    color:white;
+}
+
+.btn-custom::after{
+    content: "";
+    position:absolute;
+    left: 2px;
+    top: 0px;
+    bottom: 2px;
+    width: calc(100% - 4px);
+    height: 50%;
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+    border-radius: .25rem;
+    transition: 0.5s linear;
+}
+
+.btn-custom::before {
+    content: "";
+    position:absolute;
+    left: 2px;
+    top: 0px;
+    bottom: 2px;
+    width: calc(100% - 4px);
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    /* background: linear-gradient(to bottom, #0d6efd, rgba(6, 60, 141, 1)); */
+    border-radius: .25rem;
+    z-index: -1;
+    transition: opacity 0.25s linear;
+    opacity: 0;
+}
+
+.btn-custom:hover::before {
+    opacity: 1;
+}
+
+.btn-custom-source {
+    position: relative;
+    border:0;
+    padding: 0.5rem 1.5rem;
+    background: linear-gradient(to bottom, #6c6c6d, #444444);
+    color:white;
+    z-index: 1;
+}
+
+.btn-custom-source:hover, .btn-custom-source:active, .btn-custom-source:focus {
+    border:0;
+    color:white;
+}
+
+.btn-custom-source::after{
+    content: "";
+    position:absolute;
+    left: 2px;
+    top: 0px;
+    bottom: 2px;
+    width: calc(100% - 4px);
+    height: 50%;
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+    border-radius: .25rem;
+    transition: 0.5s linear;
+}
+
+.btn-custom-source::before {
+    content: "";
+    position:absolute;
+    left: 2px;
+    top: 0px;
+    bottom: 2px;
+    width: calc(100% - 4px);
+    height: 100%;
+    background: rgb(0, 163, 49, 0.5);
+    border-radius: .25rem;
+    z-index: -1;
+    transition: opacity 0.25s linear;
+    opacity: 0;
+}
+
+.btn-custom-source:hover::before {
+    opacity: 1;
+}
+
+.nav-link {
+    color: rgb(30, 87, 247);
+    
+    transition: all 0.25s;
+}
+
+.nav-link:hover {
+    color:#4389f3;
+    transform: scale(1.1);
+}
+
+.nav-item:active, .nav-link:active, .navbar-nav .nav-link.active {
+    color:#4389f3;
+    font-weight: bolder;
+}
+
+.active {
+    color:#4389f3;
+}
+
+#about {
+    position: relative;
+    z-index: 1;
+}
+
+#experience {
+    position: relative;
+    z-index: -1;
+}
+
+#projects {
+    position: relative;
+    z-index: 1;
+}
+
+#projects::after{
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top:100%;
+    left: 0px;
+    right: 0px;
+    bottom: -10px;
+    background-color: white;
+    background: linear-gradient(to bottom,#2e3c64 50%,transparent),repeating-linear-gradient(45deg, transparent, transparent 5px, rgb(53, 104, 247) 5px, rgb(30, 87, 247) 10px);
+}
+
+/* General----------------------- */
+
+
+/* Backgrounds------------------- */
+
+.bg-custom-gradient {
+    background: #ffffff;
+    background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgb(53, 104, 247) 10px, rgb(30, 87, 247) 20px),
+    linear-gradient(to bottom,rgb(53, 104, 247),rgb(30, 87, 247));
+}
+.bg-custom-secondary {
+    background: #ffffff;
+    background: linear-gradient(to bottom,rgb(53, 104, 247),rgb(30, 87, 247));
+}
+
+.bg-custom-project {
+    background-color: #2e3c64;
+}
+
+/* Sizing ----------------------- */
+
+.w-fit {
+    width: fit-content;
+}
+
+.img-xp {
+    display: none;
+}
+
+.img-project {
+    width: 256px;
+}
+
+/* Effects----------------------- */
+.shadow-small {
+    box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.25);
+}
+
+.shadow-dark{
+    box-shadow: 0 0 2rem 0.25rem black;
+}
+
+.drop-shadow {
+    filter: drop-shadow(0 0 0.25rem black);
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .img-xp {
+        display: inline;
+        width: 32px;
+    }
+ }
